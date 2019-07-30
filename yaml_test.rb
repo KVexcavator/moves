@@ -2,6 +2,7 @@
 require 'movie' # загружает класс Movie
 require 'yaml/store' # загружает класс YAML::Store (для сохр. ланных в файл.yml)
 # метолы YAML::Store dump, load  загрузка, выгрузка объекта 
+# Метод roots из YAML::Store возвращает все ключи хранилища в виде массива
 
 # создание хранилища test.yml
 store = YAML::Store.new('test.yml')
