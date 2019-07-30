@@ -20,7 +20,14 @@ class MovieStore
     end
   end
 
-  # читает из хранилища
+  # читает из хранилища по id
+  def find(id)
+    @store.transaction do
+      @store.id
+    end
+  end
+
+  # читает из хранилища всё
   def all
     @store.transaction do
       # новый массив со значениями ключей
