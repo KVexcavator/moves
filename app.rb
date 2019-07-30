@@ -27,5 +27,7 @@ end
 
 # запрос с : в ссылке должен быть последним в Sinatra
 get ('/movies/:id') do
-  "Received a request for movie ID: #{params['id']}"
+  id = params['id'].to_i
+  @movie = store.find(id)
+  erb :show
 end
