@@ -17,5 +17,8 @@ get ('/movies/new') do
 end
 
 post ('/movies/create') do
-  "Received: #{params.inspect}"
+  @movie=Movie.new
+  @movies.title=params['title']
+  @movies.directior=params['director']
+  @movies.year=params['year']
 end
