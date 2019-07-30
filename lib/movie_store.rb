@@ -19,4 +19,12 @@ class MovieStore
       @store[movie.id] = movie
     end
   end
+
+  # читает из хранилища
+  def all
+    @store.transaction do
+      # новый массив со значениями ключей
+      @store.roots.map { |id| @store[id] }
+    end
+  end
 end
