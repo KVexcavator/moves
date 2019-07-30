@@ -23,7 +23,7 @@ class MovieStore
   # читает из хранилища по id
   def find(id)
     @store.transaction do
-      @store.id
+      @store[id]
     end
   end
 
